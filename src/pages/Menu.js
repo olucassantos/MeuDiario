@@ -8,8 +8,10 @@ const Menu = () => {
             <View style={estilos.logo}>
                 <Text style={estilos.titulo}>Meu Diário</Text>
             </View>
+
             <View style={estilos.botoes}>
                 <Botao titulo="Novo Diário" />
+                <Botao titulo="Lista de Eventos" />
             </View>
         </View>
     );
