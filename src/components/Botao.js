@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Botao = ({ titulo }) => {
+const Botao = ({ titulo, acao }) => {
     return (
-        <TouchableOpacity style={estilos.botao}>
+        <TouchableOpacity style={estilos.botao} onPress={ acao }>
             <Text style={estilos.texto}>{ titulo }</Text>
         </TouchableOpacity>
     );

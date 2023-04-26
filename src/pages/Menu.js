@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Botao from '../components/Botao'
 
-const Menu = () => {
+const Menu = ({ navigation }) => {
     return (
         <View style={estilos.container}>
             <View style={estilos.logo}>
@@ -10,7 +10,7 @@ const Menu = () => {
             </View>
 
             <View style={estilos.botoes}>
-                <Botao titulo="Novo Diário" />
+                <Botao titulo="Novo Diário" acao={ () => navigation.navigate('NovoDiario') } />
                 <Botao titulo="Lista de Eventos" />
             </View>
         </View>
