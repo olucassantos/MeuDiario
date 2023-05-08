@@ -8,7 +8,7 @@ const NovoDiario = () => {
     const [descricao, setDescricao] = useState("");
 
     const salvar = () => {
-        alert("Salvo com sucesso!");
+        // Criar uma requisão usando o axios para o servidor
     }
 
     return (
