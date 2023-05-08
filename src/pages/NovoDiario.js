@@ -3,14 +3,14 @@ import { View, Text, TextInput,  StyleSheet } from 'react-native';
 import Botao from '../components/Botao';
 import axios from 'axios';
 
-const NovoDiario = () => {
+const NovoDiario = ({ navigation }) => {
     const [titulo, setTitulo] = useState("");
     const [data, setData] = useState("");
     const [descricao, setDescricao] = useState("");
 
     const salvar = () => {
         // Criar uma requisão usando o axios para o servidor
-        let url = "http://localhost:3000/paginasa";
+        let url = "http://localhost:3000/paginas";
 
         let dados = {
             titulo: titulo,
@@ -21,7 +21,8 @@ const NovoDiario = () => {
         axios
             .post(url, dados)
             .then((response) => {
-                console.log(response);
+                let id = response.data.id;
+                navigation.navigate('Diario', {id: id})
             })
             .catch((error) => {
                 alert('Desculpe, deu errado.');
