@@ -13,8 +13,8 @@ export default function App() {
     return (
         <NavigationContainer>
             <Pilha.Navigator>
-                <Pilha.Screen name="ListaPaginas" component={ListaPaginas} />
                 <Pilha.Screen name="Menu" component={Menu} />
+                <Pilha.Screen name="ListaPaginas" component={ListaPaginas} />
                 <Pilha.Screen name="NovoDiario" component={NovoDiario} />
                 <Pilha.Screen name="Diario" component={Diario} />
             </Pilha.Navigator>

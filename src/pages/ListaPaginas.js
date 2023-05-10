@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import axios from 'axios';
 
+import Pagina from '../components/Pagina';
+
 const ListaPaginas = () => {
     const [paginas, setPaginas] = React.useState(null);
 
@@ -23,16 +25,14 @@ const ListaPaginas = () => {
     if (!paginas) return null;
 
     const listaPaginas = paginas.map( pagina =>
-        <View key={pagina.id}>
-            <Text>{ pagina.titulo }</Text>
-        </View>
+        <Pagina key={pagina.id} pagina={pagina} />
     );
 
     return (
         <View style={estilos.container}>
             <Text style={estilos.titulo}>Meus dias</Text>
 
-            <View>
+            <View style={estilos.paginas}>
                 {listaPaginas}
             </View>
         </View>
@@ -49,7 +49,14 @@ const estilos = StyleSheet.create({
         fontFamily: "Arial",
         color: "#ff1f00",
         fontWeight: "bold",
+        textAlign: "center",
     },
+    paginas: {
+        flex: 1,
+        flexDirection: "column",
+        gap: 10,
+        padding: 10,
+    }
 });
 
 export default ListaPaginas;
