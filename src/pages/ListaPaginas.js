@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import Pagina from '../components/Pagina';
 
-const ListaPaginas = () => {
+const ListaPaginas = ({ navigation }) => {
     const [paginas, setPaginas] = React.useState(null);
 
     let url = "http://localhost:3000/paginas/";
@@ -25,7 +25,7 @@ const ListaPaginas = () => {
     if (!paginas) return null;
 
     const listaPaginas = paginas.map( pagina =>
-        <Pagina key={pagina.id} pagina={pagina} />
+        <Pagina key={pagina.id} pagina={pagina} navigation={navigation} />
     );
 
     return (

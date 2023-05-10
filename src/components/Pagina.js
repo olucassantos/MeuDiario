@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Pagina = ({ pagina }) => {
+const Pagina = ({ pagina, navigation }) => {
     return (
-        <View style={estilos.cartao}>
-            <Text style={estilos.titulo}>{ pagina.titulo }</Text>
-            <Text style={estilos.data}>{ pagina.data }</Text>
-        </View>
+        <TouchableOpacity onPress={ () => navigation.navigate('Diario', {id: pagina.id}) }>
+            <View style={estilos.cartao}>
+                <Text style={estilos.titulo}>{ pagina.titulo }</Text>
+                <Text style={estilos.data}>{ pagina.data }</Text>
+            </View>
+        </TouchableOpacity>
     );
 }
 

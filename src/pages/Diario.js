@@ -33,7 +33,7 @@ const Diario = ({ route, navigation }) => {
             <View style={estilos.botoes}>
                 <Botao titulo="Editar" />
                 <Botao titulo="Apagar" />
-                <Botao titulo="Voltar" acao={ () => navigation.navigate('Menu') } />
+                <Botao titulo="Voltar" acao={ () => navigation.goBack() } />
             </View>
         </View>
     );
