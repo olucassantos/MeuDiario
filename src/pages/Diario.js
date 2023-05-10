@@ -26,8 +26,8 @@ const Diario = ({ route, navigation }) => {
         <View style={estilos.container}>
             <View style={estilos.logo}>
                 <Text style={estilos.titulo}>{ pagina.titulo }</Text>
-                <Text>{ pagina.data }</Text>
-                <Text>{ pagina.descricao }</Text>
+                <Text style={estilos.data}>{ pagina.data }</Text>
+                <Text style={estilos.descricao}>{ pagina.descricao }</Text>
             </View>
 
             <View style={estilos.botoes}>

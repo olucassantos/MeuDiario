@@ -11,7 +11,7 @@ const Menu = ({ navigation }) => {
 
             <View style={estilos.botoes}>
                 <Botao titulo="Novo Diário" acao={ () => navigation.navigate('NovoDiario') } />
-                <Botao titulo="Lista de Eventos" />
+                <Botao titulo="Lista de Eventos" acao={ () => navigation.navigate('ListaPaginas') } />
             </View>
         </View>
     );

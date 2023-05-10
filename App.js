@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Menu from './src/pages/Menu';
 import NovoDiario from './src/pages/NovoDiario';
 import Diario from './src/pages/Diario';
+import ListaPaginas from './src/pages/ListaPaginas';
 
 const Pilha = createNativeStackNavigator();
 
@@ -12,6 +13,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <Pilha.Navigator>
+                <Pilha.Screen name="ListaPaginas" component={ListaPaginas} />
                 <Pilha.Screen name="Menu" component={Menu} />
                 <Pilha.Screen name="NovoDiario" component={NovoDiario} />
                 <Pilha.Screen name="Diario" component={Diario} />
